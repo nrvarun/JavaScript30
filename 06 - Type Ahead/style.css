@@ -41,6 +41,8 @@
       margin: 0;
       padding: 0;
       position: relative;
+      max-height: 322px;
+      overflow: hidden;
       /*perspective:20px;*/
     }
     .suggestions li {
