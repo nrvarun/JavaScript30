@@ -18,29 +18,62 @@
     }
 
     // Regular
-
+      console.log('Hello');
+   
     // Interpolated
-
+      console.log('Hello I am %s','')
+   
     // Styled
+    console.log('%C This is styled','font-size: 2em, text-shadow: 1px 1px 2px grey, color: black');
 
     // warning!
+    console.warn('Final warning');
 
     // Error :|
+    console.error('Oh shit!');
 
     // Info
+    console.info('Hey there, just an info');
 
     // Testing
 
     // clearing
+    console.clear();
 
     // Viewing DOM Elements
+    const p = document.querySelector('p');
+    console.log(p);
+    console.dir(p);
 
     // Grouping together
+    console.groupCollapsed('Marvel');
+      console.log('Iron man');
+      console.log('Captian America');
+      console.log('Black Panther');
+    console.groupEnd('Marvel');
 
+    console.groupCollapsed('DC');
+      console.log('Batman');
+      console.log('Superman');
+      console.log('Wonder woman');
+    console.groupEnd('DC');
+    
     // counting
+    console.count('DC');
+    console.count('DC');
+    console.count('DC');
+    console.count('DC');
+    console.count('DC');
 
     // timing
-
+    console.time('fetch data');
+    fetch('https://api.github.com/users/nrvarun')
+      .then( (res) => res.json())
+      .then((res) => { 
+        console.log(res)
+        console.timeEnd();
+      });
+      
   </script>
 </body>
 </html>
