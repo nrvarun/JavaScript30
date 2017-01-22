@@ -68,12 +68,14 @@
     // timing
     console.time('fetch data');
     fetch('https://api.github.com/users/nrvarun')
-      .then( (res) => res.json())
+      .then( (res) => res.json(),
+        (err) => console.log(err))
       .then((res) => { 
         console.log(res)
         console.timeEnd();
-      });
-      
+      },
+      (err) => console.log(err));
+
   </script>
 </body>
 </html>
